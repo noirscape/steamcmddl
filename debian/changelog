@@ -1,0 +1,23 @@
+steamcmddl (1.1-trusty-1ubuntu3) trusty; urgency=low
+
+  * Added dependency for dialog and wget
+
+ -- Black Mage <valentijnvermeij@gmail.com>  Sat, 27 Feb 2016 17:47:09 +0100
+
+steamcmddl (1.0-trusty-1ubuntu2) trusty; urgency=medium
+
+  * Used the wrong distro title
+
+ -- Black Mage <valentijnvermeij@gmail.com>  Sat, 27 Feb 2016 15:53:29 +0100
+
+steamcmddl (1.0-trusty-1ubuntu1) trusty; urgency=low
+
+  * Try again
+
+ -- Black Mage <valentijnvermeij@gmail.com>  Sat, 27 Feb 2016 15:45:10 +0100
+
+steamcmddl (1.0-trusty-1) trusty; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Black Mage <valentijnvermeij@gmail.com>  Sat, 27 Feb 2016 15:05:52 +0100
