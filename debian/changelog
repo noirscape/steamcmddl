@@ -1,3 +1,10 @@
+steamcmddl (2.0-xenial-1ubuntu4) xenial; urgency=medium
+
+  * Added dependency for steamcmd.
+  * Script now uses native steamcmd instead of the workaround.
+
+ -- Black Mage <valentijnvermeij@gmail.com>  Fri, 22 Apr 2016 18:19:40 +0200
+
 steamcmddl (1.1-trusty-1ubuntu3) trusty; urgency=low
 
   * Added dependency for dialog and wget
