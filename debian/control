@@ -4,12 +4,12 @@ Priority: optional
 Maintainer: Black Mage <valentijnvermeij@gmail.com>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.4
-Homepage: <insert the upstream URL, if relevant>
+Homepage: http://ev1l0rd.github.io/
 #Vcs-Git: git://git.debian.org/collab-maint/steamcmddl.git
 #Vcs-Browser: http://git.debian.org/?p=collab-maint/steamcmddl.git;a=summary
 
 Package: steamcmddl
 Architecture: all
-Depends: ${misc:Depends}, dialog, wget
+Depends: ${misc:Depends}, dialog, wget, steamcmd
 Description: Download windows versions of steam games!
  This program uses steamcmd to download Windows versions of steam games. (Note: Only works with games you own.)
