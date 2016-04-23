@@ -28,3 +28,5 @@ APPID=$(dialog --title "AppID" \
 exec 3>&-
 
 $HOME/.steamcmd/steamcmd.sh +@sSteamCmdForcePlatformType windows +login $USERNAME +force_install_dir $HOME/steamcmddl/$APPID +app_update $APPID +quit
+
+rm -rf ~/steamcmddl/$APPID/steamapps
