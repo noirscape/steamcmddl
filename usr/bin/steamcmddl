@@ -20,3 +20,5 @@ steamcmd +@sSteamCmdForcePlatformType windows +login $USERNAME +force_install_di
 
 rm $USERFILE
 rm $APPIDFILE
+
+rm -rf ~/steamcmddl/$APPID/steamapps
