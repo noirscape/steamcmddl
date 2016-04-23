@@ -18,7 +18,4 @@ exec 3>&-
 
 steamcmd +@sSteamCmdForcePlatformType windows +login $USERNAME +force_install_dir $HOME/steamcmddl/$APPID +app_update $APPID +quit
 
-rm $USERFILE
-rm $APPIDFILE
-
 rm -rf ~/steamcmddl/$APPID/steamapps
