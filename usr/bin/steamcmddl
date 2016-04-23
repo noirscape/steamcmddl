@@ -1,19 +1,20 @@
 #!/bin/bash
 
-USERFILE="$HOME/.steamcmddlusername.txt"
-APPIDFILE="$HOME/.steamcmddlappid.txt"
+exec 3>&1
 
-dialog --title "Steam login" \
+USERNAME=$(dialog --title "Steam login" \
 --backtitle "Steam CMD DL Tool - Made by ev1l0rd" \
---inputbox "Enter steam username" 8 60 2>$USERFILE
+--inputbox "Enter steam username" 8 60 2>&1 1>&3)
 
+exec 3>&-
 
-dialog --title "AppId" \
+exec 3>&1
+
+APPID=$(dialog --title "AppId" \
 --backtitle "Steam CMD DL Tool - Made by ev1l0rd" \
---inputbox "Enter your appid" 8 60 2>$APPIDFILE
+--inputbox "Enter your appid" 8 60 2>&1 1>&3)
 
-USERNAME=$(<$USERFILE)
-APPID=$(<$APPIDFILE)
+exec 3>&-
 
 steamcmd +@sSteamCmdForcePlatformType windows +login $USERNAME +force_install_dir $HOME/steamcmddl/$APPID +app_update $APPID +quit
 
