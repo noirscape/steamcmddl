@@ -12,21 +12,21 @@ else
 	echo ".steamcmd already exists. Assuming steamcmd is already downloaded to .steamcmd..."
 fi
 
+echo "$USERNAME"
+echo "$APPID"
 
-USERFILE="$HOME/.steamcmd/steamcmddlusername.txt"
-APPIDFILE="$HOME/.steamcmd/steamcmddlappid.txt"
-
-dialog --title "Steam login" \
+USERNAME=$(dialog --title "Steam login" \
 --backtitle "Steam CMD DL Tool - Made by ev1l0rd" \
---inputbox "Enter steam username" 8 60 2>$USERFILE
+--inputbox "Enter steam username" 8 60 2>&1 >/dev/null)
 
 
-dialog --title "AppId" \
+APPID=$(dialog --title "AppId" \
 --backtitle "Steam CMD DL Tool - Made by ev1l0rd" \
---inputbox "Enter your appid" 8 60 2>$APPIDFILE
+--inputbox "Enter your appid" 8 60 2>&1 >/dev/null)
 
-USERNAME=$(<$USERFILE)
-APPID=$(<$APPIDFILE)
+
+#USERNAME=$(<$USERFILE)
+#APPID=$(<$APPIDFILE)
 
 $HOME/.steamcmd/steamcmd.sh +@sSteamCmdForcePlatformType windows +login $USERNAME +force_install_dir $HOME/steamcmddl/$APPID +app_update $APPID +quit
 
