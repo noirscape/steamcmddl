@@ -1,3 +1,17 @@
+steamcmddl (2.1-xenial-1ubuntu6) xenial; urgency=low
+
+  * Added manpages
+  * Added flags
+
+ -- Black Mage <valentijnvermeij@gmail.com>  Tue, 05 Jul 2016 16:41:04 +0200
+
+steamcmddl (2.1-xenial-1ubuntu5) xenial; urgency=medium
+
+  * No more temporary files
+  * No more steamapps folder
+
+ -- Black Mage <valentijnvermeij@gmail.com>  Sat, 23 Apr 2016 17:14:18 +0200
+
 steamcmddl (2.0-xenial-1ubuntu4) xenial; urgency=medium
 
   * Added dependency for steamcmd.

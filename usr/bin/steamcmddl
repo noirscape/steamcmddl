@@ -1,20 +1,59 @@
 #!/bin/bash
+# Arguments = -u Username -a APP ID
 
+usage()
+{
+cat << EOF
+usage: $0 OPTIONS
+
+Download Windows versions of steam games.
+
+OPTIONS:
+  -h  Show this message.
+  -u  Enter username (optional)
+  -a  Enter appid (optional)
+EOF
+}
+USERNAME=
+APPID=
+
+while getopts ":hu:a:" OPTION
+do
+	case $OPTION in
+	h)
+	 usage
+	 exit 1
+	 ;;
+	u)
+	 USERNAME=$OPTARG
+	 ;;
+	a)
+	 APPID=$OPTARG
+	 ;;
+	?)
+	 usage
+	 exit 1
+	 ;;
+	esac
+done
+
+if [ -z "$USERNAME" ]
+then
 exec 3>&1
-
 USERNAME=$(dialog --title "Steam login" \
 --backtitle "Steam CMD DL Tool - Made by ev1l0rd" \
 --inputbox "Enter steam username" 8 60 2>&1 1>&3)
-
 exec 3>&-
+fi
 
+if [ -z "$APPID" ]
+then
 exec 3>&1
-
 APPID=$(dialog --title "AppId" \
 --backtitle "Steam CMD DL Tool - Made by ev1l0rd" \
 --inputbox "Enter your appid" 8 60 2>&1 1>&3)
-
 exec 3>&-
+fi
 
 steamcmd +@sSteamCmdForcePlatformType windows +login $USERNAME +force_install_dir $HOME/steamcmddl/$APPID +app_update $APPID +quit
 
